@@ -1,2 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arc-agentic-reasoning-chain"
+version = "0.1.0"
+description = "Reusable safety and observability infrastructure for multi-step tool calling"
+requires-python = ">=3.9"
+dependencies = [
+    "redis",
+ ]
+
+[tool.setuptools]
+py-modules = ["arc", "chain_logger", "redis_lock", "test_helpers"]
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
